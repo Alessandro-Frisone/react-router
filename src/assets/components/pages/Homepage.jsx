@@ -1,4 +1,13 @@
+import { useState } from "react";
+import language from "../data/languageData";
+
 export default function Homepage() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = (id) => {
+    setIsOpen((prevId) => (prevId === id ? null : id));
+  };
+
   return (
     <>
       <div>
@@ -11,7 +20,7 @@ export default function Homepage() {
           <div className="flex justify-center items-center text-center mt-[17px]">
             <img
               className="w-260 h-150 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-              src="../public/img/INTERNI_138.png"
+              src="./img/INTERNI_138.png"
               alt="Interno pasticceria"
             />
           </div>
@@ -40,43 +49,19 @@ export default function Homepage() {
               strumenti e tecnologie avanzate come HTML, CSS, JavaScript, Vite,
               React ed Express.
             </p>
-            <h3 className="text-center mt-[35px] font-semibold">
-              HTML, CSS e JavaScript:
-            </h3>
-            <p className="text-center mt-[15px]">
-              Ogni pagina del nostro sito è costruita con HTML, la struttura
-              essenziale che organizza i contenuti. Grazie a CSS, possiamo dare
-              stile ed eleganza ai nostri elementi, creando layout accattivanti
-              e un design che richiama la raffinatezza delle nostre creazioni
-              dolciarie. Con JavaScript, invece, rendiamo il sito interattivo,
-              aggiungendo funzionalità dinamiche come animazioni, moduli di
-              contatto e aggiornamenti in tempo reale.
-            </p>
-            <h3 className="text-center mt-[35px] font-semibold">
-              Vite e React:
-            </h3>
-            <p className="text-center mt-[15px]">
-              velocità ed efficienza Per garantire un'esperienza utente fluida e
-              reattiva, abbiamo scelto Vite, un moderno bundler che accelera il
-              caricamento e lo sviluppo del nostro sito. Grazie a React,
-              possiamo costruire componenti riutilizzabili, migliorando la
-              gestione dei contenuti e creando un'interfaccia intuitiva e
-              interattiva. Il nostro menu, le gallerie fotografiche e persino il
-              sistema di ordinazione online sono realizzati con questa potente
-              libreria.
-            </p>
-            <h3 className="text-center mt-[35px] font-semibold">Express:</h3>
-            <p className="text-center mt-[15px]">
-              il motore dietro le quinte Dietro il nostro sito c'è un server
-              Express, che gestisce le richieste e garantisce che tutto funzioni
-              senza intoppi. Grazie a questo framework leggero e flessibile per
-              Node.js, possiamo gestire dati dinamici, come ordini
-              personalizzati e recensioni dei clienti, offrendo un servizio
-              sempre aggiornato e su misura. Grazie a queste tecnologie,
-              Pasticceria 138 non è solo un luogo fisico dove gustare dolci
-              straordinari, ma anche una piattaforma digitale moderna, veloce e
-              interattiva.
-            </p>
+            {language.map((elm) => (
+              <div key={elm.id}>
+                <div className="container-language flex justify-center items-center gap-4 mt-[35px]">
+                  <h3 className="font-semibold">{elm.title}</h3>
+                  <button className="btn text-xl" onClick={() => toggle(elm.id)}>
+                    {isOpen === elm.id ? "-" : "+"}
+                  </button>
+                </div>
+                {isOpen === elm.id && (
+                  <p className="text-center mt-[15px]">{elm.description}</p>
+                )}
+              </div>
+            ))}
             <p className="text-center mt-[35px]">
               Sei pronto a scoprire il nostro mondo di sapori e innovazione?
               🍰💻✨
