@@ -10,21 +10,20 @@ export default function Posts() {
       setPosts(response.data);
     });
   };
-  
+
   useEffect(fetchPosts, []);
 
-  console.log(posts.title)
   return (
     <div>
       <h1>POST</h1>
-      {posts.map((post) => {
+      {posts.map((post) => (
         <div key={post.id}>
           <p>{post.title}</p>
           <p>{post.content}</p>
           <img src={post.image} alt={post.title} />
           <p>{post.tags}</p>
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
