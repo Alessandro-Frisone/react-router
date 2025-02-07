@@ -3,15 +3,17 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 export default function Posts() {
-  const [posts, setPosts] = useState({});
+  const [posts, setPosts] = useState([]);
 
   const fetchPosts = () => {
     axios.get("http://localhost:3000/bacheca").then((response) => {
       setPosts(response.data);
     });
   };
+  
   useEffect(fetchPosts, []);
 
+  console.log(posts.title)
   return (
     <div>
       <h1>POST</h1>
