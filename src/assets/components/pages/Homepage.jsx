@@ -2,7 +2,7 @@ export default function Homepage() {
   return (
     <>
       <div>
-        <h1>PASTICCERIA - 138 -</h1>
+        <h1 className="">PASTICCERIA - 138 -</h1>
         <p>
           Benvenuti da Pasticceria 138, dove la dolcezza incontra l'innovazione!
           🍰✨ Nel nostro laboratorio artigianale creiamo ogni giorno torte,

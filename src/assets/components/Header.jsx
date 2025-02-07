@@ -4,7 +4,7 @@ import MainNav from "./MainNav";
 export default function Header() {
   return (
     <header>
-        <div className="container">
+        <div>
             <MainNav/>
         </div>
     </header>
