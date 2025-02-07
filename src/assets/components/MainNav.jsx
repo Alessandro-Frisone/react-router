@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function MainNav() {
   return (
     <nav>
-      <ul>
+      <ul className="flex justify-center gap-12 font-bold text-xl p-8 w-full">
         <li>
           <NavLink to="/">HomePage</NavLink>
         </li>

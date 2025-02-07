@@ -3,7 +3,7 @@ import MainNav from "./MainNav";
 
 export default function Header() {
   return (
-    <header>
+    <header className="w-full bg-orange-200">
         <div>
             <MainNav/>
         </div>
