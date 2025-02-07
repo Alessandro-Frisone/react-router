@@ -17,12 +17,6 @@ const language = [
     description:
       "Dietro il nostro sito c'è un server Express, che gestisce le richieste e garantisce che tutto funzioni senza intoppi. Grazie a questo framework leggero e flessibile per Node.js, possiamo gestire dati dinamici, come ordini personalizzati e recensioni dei clienti, offrendo un servizio sempre aggiornato e su misura. Grazie a queste tecnologie, Pasticceria 138 non è solo un luogo fisico dove gustare dolci straordinari, ma anche una piattaforma digitale moderna, veloce e interattiva.",
   },
-  {
-    id: 4,
-    title: "Scopri il nostro mondo",
-    description:
-      "Sei pronto a scoprire il nostro mondo di sapori e innovazione? 🍰💻✨",
-  },
 ];
 
 export default language;
