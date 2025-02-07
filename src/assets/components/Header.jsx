@@ -1,7 +1,12 @@
+// ---IMPORT COMPONENTS--- //
+import MainNav from "./MainNav";
+
 export default function Header() {
   return (
     <header>
-      <h1>header</h1>
+        <div className="container">
+            <MainNav/>
+        </div>
     </header>
   );
 }

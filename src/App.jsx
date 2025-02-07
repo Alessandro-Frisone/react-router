@@ -1,13 +1,24 @@
-import Header from "./assets/components/Header";
-import Main from "./assets/components/Main"
-import Footer from "./assets/components/Footer";
+// ---IMPORT FUNCTIONS--- //
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// ---IMPORT LAYOUT--- //
+import DefaultLayout from "./assets/components/Layout/DefaultLayout";
+
+// ---IMPORT PAGES--- //
+import Homepage from "./assets/components/pages/Homepage";
+import ContactUs from "./assets/components/pages/ContactUs";
+import Posts from "./assets/components/pages/Posts";
 
 export default function App() {
   return (
-    <>
-    <Header/>
-    <Main/>
-    <Footer/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Posts" element={<Posts />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
