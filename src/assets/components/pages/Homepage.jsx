@@ -62,7 +62,7 @@ export default function Homepage() {
                 )}
               </div>
             ))}
-            <p className="text-center mt-[35px]">
+            <p className="text-center mt-[35px] mb-[35px]">
               Sei pronto a scoprire il nostro mondo di sapori e innovazione?
               🍰💻✨
             </p>
