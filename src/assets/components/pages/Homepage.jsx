@@ -53,7 +53,7 @@ export default function Homepage() {
               <div key={elm.id}>
                 <div className="container-language flex justify-center items-center gap-4 mt-[35px]">
                   <h3 className="font-semibold">{elm.title}</h3>
-                  <button className="btn text-xl" onClick={() => toggle(elm.id)}>
+                  <button className="btn text-xl p-2 cursor-pointer" onClick={() => toggle(elm.id)}>
                     {isOpen === elm.id ? "-" : "+"}
                   </button>
                 </div>
