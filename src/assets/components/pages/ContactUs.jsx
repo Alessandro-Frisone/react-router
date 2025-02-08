@@ -17,7 +17,7 @@ export default function ContactUs() {
           <p><strong>Ecco come puoi contattarci:</strong></p>
           <p className="mt-[10px]">📧 Email: support@contactus138.com</p>
           <p className="mt-[10px]">📞 Telefono: +39 123 456 7890</p>
-          <p className="mt-[10px]">📍 Indirizzo: Via Esempio, 138, Milano, Italia</p>
+          <p className="mt-[10px]">📍 Indirizzo: Via Esempio, 138, Roma, Italia</p>
         </div>
       </div>
       <p className="text-center text-lg mt-[35px]">
