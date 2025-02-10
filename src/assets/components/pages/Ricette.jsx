@@ -23,18 +23,23 @@ export default function Ricette() {
 
   return (
     <div className="container max-w-7xl mx-auto py-12 space-y-4">
-        <h1 className="text-3xl font-bold text-yellow-500 mb-6">
+      <h1 className="text-5xl font-bold text-[#d4bb9b] text-center mb-10">
         {ricetta.title}
       </h1>
-      <img className="w-full aspect-video object-cover" src={ricetta.image} />
-      {ricetta.ingredients && (
-        <ul>
-          {ricetta.ingredients.map((ingredient) => (
-            <li key={ingredient}>{ingredient}</li>
-          ))}
-        </ul>
-      )}
-      <p>{ricetta.content}</p>
+      <img
+        className="w-120 h-90 m-auto aspect-video object-cover mb-8"
+        src={ricetta.image}
+      />
+      <p className="text-center mb-8">{ricetta.content}</p>
+      <p className="text-center mb-7">
+        {ricetta.tags?.map((tag) => `#${tag}`).join(" ")}
+      </p>
+      <button
+        onClick={() => navigate(-1)}
+        className="mx-auto px-6 py-3 bg-[#d4bb9b] text-white font-semibold rounded-lg shadow-md hover:bg-[#bfa07d] transition duration-300 flex items-center" 
+      >
+        <i className="fa-solid fa-arrow-left mr-3"></i> Indietro
+      </button>
     </div>
-  )
+  );
 }
