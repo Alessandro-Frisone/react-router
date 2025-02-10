@@ -21,6 +21,7 @@ export default function Ricette() {
       });
   }, [id, navigate]);
 
+
   return (
     <div className="container max-w-7xl mx-auto py-12 space-y-4">
       <h1 className="text-5xl font-bold text-[#d4bb9b] text-center mb-10">
@@ -38,7 +39,7 @@ export default function Ricette() {
         onClick={() => navigate(-1)}
         className="mx-auto px-6 py-3 bg-[#d4bb9b] text-white font-semibold rounded-lg shadow-md hover:bg-[#bfa07d] transition duration-300 flex items-center" 
       >
-        <i className="fa-solid fa-arrow-left mr-3"></i> Indietro
+        <i class="fa-solid fa-x"></i>
       </button>
     </div>
   );
